@@ -3,7 +3,6 @@ import os
 from typing import Mapping
 
 import openai
-from dotenv import load_dotenv
 from pydantic import BaseModel
 
 
@@ -42,7 +41,6 @@ class EntailmentClassifier:
     }
 
     def __init__(self, model="gpt-4-turbo-preview"):
-        load_dotenv("../../.env")
         self.model = model
         self.openai_client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 

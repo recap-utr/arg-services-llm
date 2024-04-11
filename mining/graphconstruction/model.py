@@ -5,7 +5,6 @@ from typing import Mapping
 import openai
 from arguebuf import AtomNode, Edge, Graph, SchemeNode
 from arguebuf.model.scheme import Attack, Support
-from dotenv import load_dotenv
 
 
 class GraphConstructor:
@@ -44,7 +43,6 @@ class GraphConstructor:
     }
 
     def __init__(self, model="gpt-4-turbo-preview"):
-        load_dotenv("../../.env")
         self.model = model
         self.openai_client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 

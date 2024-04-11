@@ -8,10 +8,10 @@ from arg_services.mining.v1beta import (
     major_claim_pb2_grpc,
 )
 
-from argmining.entailment.create_servicer import EntailmentServicer
-from argmining.extraction.create_servicer import ExtractionServicer
-from argmining.graphconstruction.create_servicer import GraphConstructionServicer
-from argmining.majorclaim.create_servicer import MajorClaimServicer
+from mining.entailment.create_servicer import EntailmentServicer
+from mining.extraction.create_servicer import ExtractionServicer
+from mining.graphconstruction.create_servicer import GraphConstructionServicer
+from mining.majorclaim.create_servicer import MajorClaimServicer
 
 
 def serve():
@@ -30,7 +30,7 @@ def serve():
         GraphConstructionServicer(),
         server,
     )
-    server.add_insecure_port("[::]:8888")
+    server.add_insecure_port("[::]:50500")
     server.start()
     print("Server started")
     server.wait_for_termination()

@@ -3,7 +3,6 @@ import os
 
 import openai
 import spacy
-from dotenv import load_dotenv
 from pydantic import BaseModel
 
 # model source code is adjusted from "Fine-Grained Argument Unit Recognition and Classification" by Trautmann et al. (DOI: https://doi.org/10.1609/aaai.v34i05.6438)
@@ -40,7 +39,6 @@ class Extractor:
     }
 
     def __init__(self, model="gpt-4-turbo-preview"):
-        load_dotenv("../../.env")
         self.model = model
         self.openai_client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
