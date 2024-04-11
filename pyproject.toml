@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "argmining-llm"
+version = "0.1.0"
+description = ""
+authors = [
+    "Kilian Bartz <s4kibart@uni-trier.de>",
+    "Mirko Lenz <mirko@mirkolenz.com>",
+]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+arg-services = "^1.7"
+arguebuf = "^2.5"
+nltk = "^3.8"
+openai = "^1.16"
+python-dotenv = "^1.0"
+spacy = "^3.7"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
